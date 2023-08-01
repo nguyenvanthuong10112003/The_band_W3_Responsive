@@ -1,0 +1,67 @@
+@media only screen and (max-width: 600px)
+{
+    #header > #navigation {
+        flex-direction: column;
+    }
+
+    #header > #navigation > a,
+    #slider > #title {
+        display: none;
+    }  
+
+    #header > #navigation > #goto-home {
+        display: block;
+    }
+
+    #header > #navigation > a > li #menu-icon {
+        margin: auto 0 auto auto;
+        padding: 12px 24px;
+        line-height: 1.5;
+    }
+
+    #header > #navigation > a > li #menu-icon:hover {
+        background-color: #ccc;
+        color: #000;
+    }
+
+    #content > #character {
+        flex-direction: column;
+    }
+
+    #content > #character > .info {
+        width: 100%;
+    }
+
+    #content > #tour > .container > #location {
+        flex-direction: column;
+    }
+
+    #content > #tour > .container > #location > div {
+        width: 100%;
+        padding: 0;
+    }
+    
+    #content > #contact > #contact-send {
+        flex-direction: column;
+    }
+
+    #content > #contact > #contact-send > #contact-form > form > div {
+        flex-direction: column;
+    }
+
+    #content > #contact > #contact-send > #contact-form > form > div > #input-name {
+        margin: 8px 0;
+    }
+
+    .pd-0-10 {
+        padding: 0 10px;
+    }
+    
+    #help {
+        right: 10px;
+    }
+
+    .button-close {
+        right: 10px;
+    }
+}

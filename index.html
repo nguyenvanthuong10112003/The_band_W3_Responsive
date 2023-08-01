@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The band</title>
+    <link rel="stylesheet" href="./fontawesome-web/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./stylepc.css">
+    <link rel="stylesheet" href="./stylemobile.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+</head>
+<script type="script" src="./javascript.js"></script>
+<script>
+    let check = false;
+    function onclickMenu()
+    {
+        check = !check;
+        document.getElementById('goto-band').style.display = check == true ? 'block' : 'none';
+        document.getElementById('goto-tour').style.display = check == true ? 'block' : 'none';
+        document.getElementById('goto-contact').style.display = check == true ? 'block' : 'none';
+        document.getElementById('merch').style.display = check == true ? 'block' : 'none';
+    }
+    let i = 0;
+    let urlImageSlide = [
+    ["./image/1.jpg","Los Angeles","We had the best time playing at Venice Beach!"], 
+    ["./image/2.jpg","New York","The atmospheere in New York is lorem ipsum."],
+    ["./image/3.jpg","Chicago","Thank you,Chicago - A night we won't forget."] 
+    ];
+    setInterval(function(){
+        i++;
+        if(i >= 3)
+            i = 0;
+        document.getElementById("img-slide").src = urlImageSlide[i][0];
+        document.getElementById("location").innerHTML = urlImageSlide[i][1];
+        document.getElementById("note").innerHTML = urlImageSlide[i][2];
+    }, 5000);
+</script>
+<body>
+    <div id="main">
+        <div id="tag-buy">
+            <div class="container w900 w500 pd-0-10">
+                <div class="header-tag-buy">
+                    <span 
+                    onclick="document.getElementById('tag-buy').style.display = 'none'"
+                    class="button-close">×</span>
+                    <div class="title">
+                        <i class="icon-bag fa-solid fa-suitcase"></i>
+                        Tickets
+                    </div>
+                </div>
+                <div class="content-tag-buy">
+                    <form action="#">
+                        <span class="title-form" id="many">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Tickets, $15 per person
+                        </span>
+                        <input type="text" class="many input" name="many" placeholder="How many?">
+                        <span class="title-form" id="email">
+                            <i class="fa-solid fa-user"></i>
+                            Send To
+                        </span>
+                        <input type="email" class="email input" placeholder="Enter email">
+                        <input type="submit" class="submit" id="pay" value="PAY">
+                    </form>
+                    <button id="close"
+                    onclick="document.getElementById('tag-buy').style.display = 'none'"
+                    >
+                        Close
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <span id="help">Need <a href="#">help?</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="header">
+            <ul id="navigation">
+                <a href="#main" id="goto-home"><li>
+                    <span>HOME</span>
+                    <i onclick="onclickMenu()" class="fa-solid fa-bars" id="menu-icon"></i>
+                </li>
+                </a>
+                <a href="#introduce" id="goto-band"><li>BAND</li></a>
+                <a href="#tour" id="goto-tour"><li>TOUR</li></a>
+                <a href="#contact" id="goto-contact"><li>CONTACT</li></a>
+                <a id="more">
+                    <li
+                        onmousemove="document.getElementById('list').style.display = 'block'"
+                        onmouseout="document.getElementById('list').style.display = 'none'"
+                    >
+                        <span>
+                            MORE<i class="fa-solid fa-caret-down"></i>
+                        </span>
+                        <ul id="list">
+                            <li>Merchandise</li>
+                            <li>Extras</li>
+                            <li>Media</li>
+                        </ul>
+                    </li>
+                </a>
+                <a href="#" id="merch">
+                    <li>MERCH</li>
+                </a>
+                <a href="#" id="icon-search">
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass" style="color: #fff;"></i>
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+        <div id="slider">
+            <img id="img-slide" src="./image/1.jpg" alt="">
+            <div id="title">
+                <div id="location">Los Angeles</div>
+                <span id="note">We had the best time playing at Venice Beach!</span>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="introduce">
+                <h1 class="title">THE BAND</h1>
+                <i class="comment">
+                    We love music
+                </i>
+                <p id="contents">
+                    We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div id="character">
+                    <div class="info">
+                        <span class="name">
+                            Name
+                        </span>
+                        <img src="./image/bandmember.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <span class="name">
+                            Name
+                        </span>
+                        <img src="./image/bandmember.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <span class="name">
+                            Name
+                        </span>
+                        <img src="./image/bandmember.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="tour">
+                <div class="container">
+                    <h1 class="title">TOUR DATES</h1>
+                    <i class="comment">Remember to book your tickets!</i>
+                    <br>
+                    <div id="calur">
+                        <div class="calur-item">
+                            September
+                            <span class="sold-out">Sold out</span>
+                        </div>
+                        <div class="calur-item">
+                            October
+                            <span class="sold-out">Sold out</span>
+                        </div>
+                        <div class="calur-item">
+                            November
+                            <span class="res-count">3</span>
+                        </div>
+                    </div>
+                    <div id="location">
+                        <div>
+                            <img src="./image/newyork.jpg" alt="">
+                            <div class="information">
+                                <span class="location-name">New York</span>
+                                <span class="time-show">Fri 27 Nov 2016</span>
+                                <span class="property">
+                                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                                </span>
+                                <span 
+                                onclick="document.getElementById('tag-buy').style.display = 'block'"
+                                class="button-buy-ticket">Buy Tickets</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./image/paris.jpg" alt="">
+                            <div class="information">
+                                <span class="location-name">Paris</span>
+                                <span class="time-show">Sat 28 Nov 2016</span>
+                                <span class="property">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</span>
+                                <span 
+                                onclick="document.getElementById('tag-buy').style.display = 'block'"
+                                class="button-buy-ticket">Buy Tickets</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./image/sanfran.jpg" alt="">
+                            <div class="information">
+                                <span class="location-name">San Francisco</span>
+                                <span class="time-show">Sun 29 Nov 2016</span>
+                                <span class="property">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</span>
+                                <span 
+                                onclick="document.getElementById('tag-buy').style.display = 'block'"
+                                class="button-buy-ticket">Buy Tickets</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contact">
+                <div class="title">CONTACT</div>
+                <div class="comment">Fan? Drop a note!</div>
+                <div id="contact-send" class="container">
+                    <div id="contact-info" class="w-50pt">
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Nam Dinh, Viet Nam</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>0886454996</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>thuong0206066@nuce.edu.vn</span>
+                        </div>
+                    </div>
+                    <div id="contact-form" class="w-50pt">
+                        <form action="#">
+                            <div>
+                                <input type="text" id="input-name" class="input" placeholder="Name">
+                                <input type="email" id="input-email" class="ml-16 input" placeholder="Email">
+                            </div>
+                            <input type="text" id="input-message" class="input" placeholder="Message">
+                            <input type="submit" class="submit" value="SEND">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <img id="map" src="./image/map.jpg" alt="">
+        </div>
+
+        <div id="footer">
+            <div id="list-logo">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-snapchat"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <span id="copyright">Powered by 
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100050444027545">
+                    Nguyen Van Thuong
+                </a>
+            </span>
+        </div>
+    </div>
+</body>
+</html>

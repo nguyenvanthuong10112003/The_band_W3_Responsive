@@ -1,0 +1,43 @@
+@media only screen and (min-width: 601px)
+{
+    #header > #navigation > a > li #menu-icon, 
+    #header > #navigation > #merch {
+        display: none !important;
+    }
+
+    #header > #navigation > #goto-band,
+    #header > #navigation > #goto-tour,
+    #header > #navigation > #goto-contact,
+    #header > #navigation > #more {
+        display: block !important; 
+    }
+
+    #navigation > a:last-child {
+        margin-left: auto;
+    }
+    
+    #navigation > a:last-child > li:hover {
+        background-color: #f44336;   
+    }
+
+    .ml-16 {
+        margin-left: 16px;
+    }
+
+    .w-50pt {
+        width: 50%;
+    }
+
+    .w500 {
+        width: 500px;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .w900 {
+        width: 900px;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+:root {
+    --header-height: 50px;
+    --max-width-content: 768px;
+}
+
+#main {
+    width: 100%;
+}  
+
+a {
+    text-decoration: none;
+}
+
+br {
+    height: 10px;
+}
+
+#header {
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+}
+
+#header > #navigation {
+    background-color: #000;
+    display: flex;
+}
+
+#navigation > a > li {
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 15px;
+    list-style: none;
+    line-height: 1.5;
+}
+
+#header > #navigation > a:first-child > li {
+    display: flex;
+    padding: 0;
+}
+
+#header > #navigation > a:first-child > li > span {
+    padding: 12px 24px;
+}
+
+#navigation > a > li:hover, #navigation > #more > li > ul > li:hover,
+#navigation > #more > li > span:hover, 
+#header > #navigation > a:first-child > li > span:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+#navigation > a:first-child > li:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#navigation > #more > li {
+    padding: 0;
+}
+
+#navigation > #more > li > span {
+    padding: 12px 24px;
+    display: block;
+}
+
+#navigation > #more > li > ul {
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+#navigation > #more > li > ul > li {
+    list-style: none;
+    padding: 8px 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#slider {
+    width: 100%;
+    padding-top: 46px;
+    position: relative;
+}
+
+#slider > img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#slider > div {
+    position: absolute;
+    text-align: center;
+    display: block;
+    left: 50%;
+    margin-top: auto;
+    transform: translate(-50%, 0%);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bolder;
+    bottom: 0;
+    padding: 32px 16px;
+}
+
+#slider > div > #location {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+#introduce {
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    padding: 64px 16px;
+    text-align: center;
+    max-width: var(--max-width-content);
+    width: 100%;
+}
+
+.title {
+    margin: 10px 0;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.comment {
+    margin: 15px 0;
+    font-style: italic;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    color: #968e8e;
+    width: 100%;
+    text-align: center;
+}
+
+#introduce > #contents {
+    margin: 15px 0;
+    width: 100%;
+    text-align: justify;
+}
+
+#introduce > #character {
+    padding: 32px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#introduce > #character > .info {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+}
+
+#introduce > #character > .info > .name {
+    text-align: center;
+    margin: 15px 0;
+}
+
+#introduce > #character > .info > img {
+    margin: 0 auto 16px;
+    width: 60%;
+    border-radius: 4px;
+}
+
+#content > #tour {
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    padding: 64px 16px;
+}
+
+.container {
+    max-width: var(--max-width-content);
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#content > #tour > .container > #calur {
+    width: 100%;
+    text-align: left;
+    background-color: #fff;
+    color: #000;
+    margin: 32px 0;
+}
+
+#content > #tour > .container > #calur > .calur-item {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+}
+
+.sold-out {
+    padding: 0px 8px;
+    margin-left: 16px;
+    color: #fff;
+    background-color: #F44336;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.res-count {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 16px;
+    display: inline-block;
+    padding: 0 8px;
+    float: right;
+}
+
+#content > #tour > .container > #location {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 32px;
+    width: 100%;
+}
+
+#content > #tour > .container > #location > div {
+    box-sizing: unset;
+    padding: 0 8px;
+    margin-bottom: 16px;
+    width: calc((100% - 32px)/3);
+}
+
+#content > #tour > .container > #location > div:first-child {
+    padding-left: 0px;
+}
+
+#content > #tour > .container > #location > div:last-child {
+    padding-right: 0px;
+}
+
+#content > #tour > .container > #location > div > img {
+    width: 100%;
+    vertical-align: middle;
+    border-style: none;
+}
+
+#content > #tour > .container > #location > div > img:hover {
+    opacity: 0.6;
+}
+
+.information {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 16px;
+}
+
+.location-name {
+    font-weight: bolder;
+    margin: 15px 0;
+}
+
+.time-show {
+    color: #777;
+}
+
+.property {
+    margin: 15px 0;
+}
+
+.button-buy-ticket {
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    background-color: #000;
+    color: #fff;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.button-buy-ticket:hover, .submit:hover, #pay:hover, #close:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+#content > #contact {
+    padding: 64px 16px;
+    position: relative;
+}
+
+#content > #contact > #contact-send {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 32px 0;
+}
+
+#content > #contact > #contact-send > #contact-info > div > i,
+#content > #contact > #contact-send > #contact-info > div > span  {
+    font-size: 18px;
+}
+
+#content > #contact > #contact-send > #contact-info > div > i {
+    margin-right: 2px;
+}
+
+#content > #contact > #contact-send > #contact-form > form {
+    display: flex;
+    flex-direction: column;
+}
+
+#content > #contact > #contact-send > #contact-form > form > div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+#content > #map {
+    width: 100%;
+    max-width: 100%;
+    filter: grayscale(50%);
+    height: auto;
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    color: #666;
+}
+
+#footer > #list-logo > i {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+#footer > #list-logo > i:hover {
+    opacity: 0.6;
+}
+
+#footer > #copyright {
+    margin: 15px 0;
+}
+
+#footer > #copyright > a {
+    text-decoration: underline;
+    color: #666;
+}
+
+#tag-buy {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 9, 9, 0.19);
+    z-index: 2;
+    padding-top: 100px;
+    display: none;
+}
+
+#tag-buy > div {
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    animation: growth ease-in 0.2s;
+}
+
+.content-tag-buy {
+    background-color: #fff;
+    padding: 0 16px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#pay {
+    padding: 16px 0;
+    margin: 16px 0;
+    width: 100%;
+    background-color: #009688;
+}
+
+#close {
+    padding: 8px 16px;
+    margin: 16px 0;
+    margin-right: auto;
+    background-color: #F44336;
+    color: #fff;
+}
+
+#close > i {
+    font-weight: bolder;
+}
+
+#help {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
+
+#help > a {
+    color: #2196f3;
+    text-decoration: underline;
+}
+
+.title-form {
+    margin: 15px 0;
+    display: block;
+}
+
+.header-tag-buy > div > i {
+    font-size: 30px;
+}
+
+.button-close {
+    padding: 8px 16px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+}
+
+.button-close:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.header-tag-buy {
+    background-color: #009688;
+    opacity: 1;
+    padding: 32px 16px;
+    color: #fff;
+}
+
+.input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.submit {
+    margin: 16px 0;
+    padding: 8px 16px;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+@keyframes growth {
+    from {
+        margin-top: -200px;
+    } to {
+        margin-top: 0px;
+    }
+}
